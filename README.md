@@ -21,6 +21,4 @@ A simple web application that allows users to add items, display them in a sideb
 - **Spin-the-Wheel Animation:**  
   Users will be able to spin a virtual wheel with all added items, and the wheel will randomly select a winner with an animated spinning effect.  
 - **Enhanced UI/UX for Wheel:**  
-  Colorful segments, pointer, and smooth animations for a visually appealing experience.   
-- **Mobile Optimizations:**  
-  Fully responsive wheel layout for mobile devices with touch controls.  
+  Colorful segments, pointer, and smooth animations for a visually appealing experience.
