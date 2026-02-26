@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spin D Wheel</title>
+    <title>Random Generator</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
     <!-- Google Fonts -->
@@ -17,34 +17,46 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li>
-          <img
-            class="appearance-btn"
-            src="./assets/sun-icon.png"
-            id="appearance-btn"
-          />
-        </li>
-        <li><h1>Spin The Wheel</h1></li>
-      </ul>
-    </nav>
+    <div class="page-layout">
+      <div class="left-side">
+        <nav>
+          <ul>
+            <li>
+              <img
+                class="appearance-btn"
+                src="./assets/sun-icon.png"
+                id="appearance-btn"
+              />
+            </li>
+            <li><h1>Random Generator</h1></li>
+          </ul>
+        </nav>
 
-    <form>
-      <div class="input-section">
-        <h3 class="description">Add your options below</h3>
+        <form class="left-panel">
+          <div class="input-section">
+            <h3 class="description">Add your options below</h3>
 
-        <div class="input">
-          <input
-            type="text"
-            id="text-input"
-            placeholder="Enter your options here."
-            required
-            minlength="3"
-          />
-          <button id="add-btn" class="add-btn">Add</button>
-        </div>
+            <div class="input">
+              <input
+                type="text"
+                id="text-input"
+                placeholder="Enter your options here."
+                required
+                minlength="3"
+              />
+              <button id="add-btn">Add</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+
+      <aside class="right-panel">
+        <div class="right-header">
+          <h3>Items</h3>
+          <button id="clear-btn">Clear</button>
+        </div>
+        <ul id="items-list"></ul>
+      </aside>
+    </div>
   </body>
 </html>
