@@ -17,8 +17,34 @@
   </head>
 
   <body>
-    <h1>Spin The Wheel</h1>
+    <nav>
+      <ul>
+        <li>
+          <img
+            class="appearance-btn"
+            src="./assets/sun-icon.png"
+            id="appearance-btn"
+          />
+        </li>
+        <li><h1>Spin The Wheel</h1></li>
+      </ul>
+    </nav>
 
-    <h3 class="description">Add your options below</h3>
+    <form>
+      <div class="input-section">
+        <h3 class="description">Add your options below</h3>
+
+        <div class="input">
+          <input
+            type="text"
+            id="text-input"
+            placeholder="Enter your options here."
+            required
+            minlength="3"
+          />
+          <button id="add-btn" class="add-btn">Add</button>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
