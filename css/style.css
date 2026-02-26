@@ -124,7 +124,6 @@ button:hover {
 
 .right-header h3 {
   font-size: 30px;
-  text-decoration: underline;
 }
 
 #items-list {
@@ -141,4 +140,9 @@ button:hover {
 .result-section {
   text-align: center;
   padding-top: 50px;
+}
+
+.result {
+  font-size: 20px;
+  font-family: "DM Mono", cursive;
 }

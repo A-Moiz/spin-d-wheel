@@ -1,13 +1,17 @@
 let items = [];
+let generatedItem = "";
 const appearanceBtn = document.getElementById("appearance-btn");
 const addBtn = document.getElementById("add-btn");
 const clearBtn = document.getElementById("clear-btn");
 const itemsList = document.getElementById("items-list");
 const itemsTitle = document.getElementById("items-title");
+const result = document.getElementById("result");
+const generateBtn = document.getElementById("generate-btn");
 
 appearanceBtn.addEventListener("click", changeAppearance);
 addBtn.addEventListener("click", addItem);
 clearBtn.addEventListener("click", clearItems);
+generateBtn.addEventListener("click", generateRandomItem);
 itemsTitle.textContent = `Items (${items.length})`;
 
 // Change website appearance
@@ -54,4 +58,15 @@ function renderItems() {
 function clearItems() {
   items = [];
   renderItems();
+  result.textContent = `Result `;
+}
+
+// Generate random item from the list
+function generateRandomItem() {
+  if (items.length === 0) {
+    alert("Please add some items to the list first.");
+    return;
+  }
+  generatedItem = items[Math.floor(Math.random() * items.length)];
+  result.textContent = `Result: ${generatedItem}`;
 }
