@@ -27,4 +27,4 @@ A simple web application that allows users to add items, display them in a sideb
 
 ## 🌐 Website
 
-Click <a href="https://a-moiz.github.io/spin-d-wheel/" target="_blank">here</a> to use this site.
+Click [here](https://a-moiz.github.io/spin-d-wheel/) to use this site.
