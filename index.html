@@ -56,10 +56,9 @@
             </div>
           </div>
         </form>
-        <div class="result-section">
-          <button id="generate-btn" type="button">Generate Random Item</button>
-          <p id="result" class="result">Result</p>
-        </div>
+        <button id="generate-btn" type="button" class="generate-btn">
+          Generate Random Item
+        </button>
       </div>
 
       <aside class="right-panel">
@@ -69,6 +68,18 @@
         </div>
         <ul id="items-list"></ul>
       </aside>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content">
+        <h3>Generated Item:</h3>
+        <h2 id="modal-generated-item"></h2>
+        <div class="modal-actions">
+          <button id="modal-remove-btn">Remove this from list</button>
+          <button id="modal-again-btn">Generate again</button>
+          <button id="modal-close-btn">Add more items</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

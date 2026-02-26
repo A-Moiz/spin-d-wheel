@@ -36,6 +36,10 @@ body.dark-mode #items-list li {
   border-bottom: 1px solid #333;
 }
 
+body.dark-mode .modal-content {
+  background-color: #333;
+}
+
 nav {
   position: relative;
   padding: 15px 20px;
@@ -137,21 +141,83 @@ button:hover {
   border-bottom: 1px solid #ddd;
 }
 
-.result-section {
+.generate-btn {
   text-align: center;
-  padding-top: 50px;
-}
-
-.result {
-  font-size: 20px;
-  font-family: "DM Mono", cursive;
+  width: 250px;
+  align-self: center;
+  margin-top: 50px;
 }
 
 .delete-btn {
   background-color: red;
-  margin-left: 200px;
+  margin-left: 20px;
 }
 
 .delete-btn:hover {
   background-color: darkred;
+}
+
+.list-item {
+  text-transform: capitalize;
+}
+
+.modal-overlay {
+  font-family: "DM Mono", cursive;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+#modal-generated-item {
+  text-transform: capitalize;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#modal-remove-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#modal-again-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#modal-close-btn {
+  background: #ada9a9;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
