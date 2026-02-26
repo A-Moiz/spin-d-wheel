@@ -22,3 +22,9 @@ A simple web application that allows users to add items, display them in a sideb
   Users will be able to spin a virtual wheel with all added items, and the wheel will randomly select a winner with an animated spinning effect.  
 - **Enhanced UI/UX for Wheel:**  
   Colorful segments, pointer, and smooth animations for a visually appealing experience.
+
+--- 
+
+## 🌐 Website
+
+Click <a href="https://a-moiz.github.io/spin-d-wheel/" target="_blank">here</a> to use this site.
