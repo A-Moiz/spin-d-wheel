@@ -112,6 +112,7 @@ button:hover {
   padding: 30px;
   background-color: #f2f2f2;
   border-left: 1px solid #ddd;
+  font-family: "DM Mono", cursive;
 }
 
 .right-header {
@@ -123,6 +124,7 @@ button:hover {
 
 .right-header h3 {
   font-size: 30px;
+  text-decoration: underline;
 }
 
 #items-list {
@@ -134,4 +136,9 @@ button:hover {
 #items-list li {
   padding: 8px 0;
   border-bottom: 1px solid #ddd;
+}
+
+.result-section {
+  text-align: center;
+  padding-top: 50px;
 }
