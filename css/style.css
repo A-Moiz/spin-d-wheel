@@ -1,6 +1,7 @@
 body {
   font-family: "Indie Flower", cursive;
   margin: 0;
+  padding: 0;
   background-color: white;
   color: black;
   transition:
@@ -13,6 +14,16 @@ body.dark-mode {
   color: white;
 }
 
+body.dark-mode input {
+  background-color: #222;
+  color: white;
+  border: 2px solid #555;
+}
+
+body.dark-mode input::placeholder {
+  color: #aaa;
+}
+
 nav {
   position: relative;
   padding: 15px 20px;
@@ -23,14 +34,13 @@ nav ul {
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
   text-align: center;
   font-size: 70px;
   text-decoration: underline;
+  margin: 0;
 }
 
 .input-section {
@@ -49,4 +59,27 @@ h1 {
   left: 20px;
   top: 20px;
   cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0057b3;
 }
