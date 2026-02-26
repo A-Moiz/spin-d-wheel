@@ -146,3 +146,12 @@ button:hover {
   font-size: 20px;
   font-family: "DM Mono", cursive;
 }
+
+.delete-btn {
+  background-color: red;
+  margin-left: 200px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}

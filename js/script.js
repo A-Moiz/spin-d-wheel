@@ -35,9 +35,14 @@ function addItem(event) {
     alert("This item already exists in the list.");
     return;
   } else {
-    items.push(item);
-    input.value = "";
-    renderItems();
+    if (item.length < 3) {
+      alert("Item must be at least 3 characters long.");
+      return;
+    } else {
+      items.push(item);
+      input.value = "";
+      renderItems();
+    }
   }
 }
 
@@ -46,10 +51,19 @@ function renderItems() {
   itemsList.innerHTML = "";
   itemsTitle.textContent = `Items (${items.length})`;
 
-  // create <li> for each item in items
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const li = document.createElement("li");
     li.textContent = item;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete-btn";
+
+    deleteBtn.addEventListener("click", () => {
+      deleteItem(index);
+    });
+
+    li.appendChild(deleteBtn);
     itemsList.appendChild(li);
   });
 }
@@ -69,4 +83,10 @@ function generateRandomItem() {
   }
   generatedItem = items[Math.floor(Math.random() * items.length)];
   result.textContent = `Result: ${generatedItem}`;
+}
+
+// Delete item from the list
+function deleteItem(index) {
+  items.splice(index, 1);
+  renderItems();
 }
