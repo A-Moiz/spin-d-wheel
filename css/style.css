@@ -1,0 +1,15 @@
+body {
+  font-family: "Indie Flower", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  text-decoration: underline;
+}
+
+.description {
+  text-align: center;
+  color: gray;
+  font-size: 30px;
+}
