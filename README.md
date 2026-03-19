@@ -1,5 +1,11 @@
 # Spin D (The) Wheel
 
+## 🌐 Website
+
+Click [here](https://a-moiz.github.io/spin-d-wheel/) to use this site.
+
+---
+
 A simple web application that allows users to add items, display them in a sidebar, and generate a random item from the list. Includes dark mode support and a responsive layout with a right-side panel.
 
 ---
@@ -22,9 +28,3 @@ A simple web application that allows users to add items, display them in a sideb
   Users will be able to spin a virtual wheel with all added items, and the wheel will randomly select a winner with an animated spinning effect.  
 - **Enhanced UI/UX for Wheel:**  
   Colorful segments, pointer, and smooth animations for a visually appealing experience.
-
---- 
-
-## 🌐 Website
-
-Click [here](https://a-moiz.github.io/spin-d-wheel/) to use this site.
