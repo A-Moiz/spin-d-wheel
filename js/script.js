@@ -1,6 +1,35 @@
 let items = [];
 let generatedItem = "";
 let currentGeneratedIndex = -1;
+const letters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const appearanceBtn = document.getElementById("appearance-btn");
 const addBtn = document.getElementById("add-btn");
@@ -8,6 +37,8 @@ const clearBtn = document.getElementById("clear-btn");
 const itemsList = document.getElementById("items-list");
 const itemsTitle = document.getElementById("items-title");
 const generateBtn = document.getElementById("generate-btn");
+const lettersBtn = document.getElementById("letters-btn");
+const numbersBtn = document.getElementById("numbers-btn");
 
 const modalOverlay = document.getElementById("modal-overlay");
 const modalItemText = document.getElementById("modal-generated-item");
@@ -20,6 +51,8 @@ addBtn.addEventListener("click", addItem);
 clearBtn.addEventListener("click", clearItems);
 generateBtn.addEventListener("click", generateRandomItem);
 itemsTitle.textContent = `Items (${items.length})`;
+lettersBtn.addEventListener("click", autofillLetters);
+numbersBtn.addEventListener("click", autofillNumbers);
 
 // Change website appearance
 function changeAppearance() {
@@ -42,8 +75,8 @@ function addItem(event) {
     alert("This item already exists in the list.");
     return;
   } else {
-    if (item.length < 3) {
-      alert("Item must be at least 3 characters long.");
+    if (item === "") {
+      alert("Please enter a value to add to the list.");
       return;
     } else {
       items.push(item);
@@ -81,6 +114,32 @@ function clearItems() {
   items = [];
   renderItems();
   result.textContent = `Result `;
+}
+
+// Autofill with letters
+function autofillLetters() {
+  for (let i = 0; i < letters.length; i++) {
+    if (items.includes(letters[i])) {
+      alert("This item already exists in the list.");
+      return;
+    } else {
+      items.push(letters[i]);
+    }
+  }
+  renderItems();
+}
+
+// Autofill with numbers
+function autofillNumbers() {
+  for (let i = 0; i < numbers.length; i++) {
+    if (items.includes(numbers[i])) {
+      alert("This item already exists in the list.");
+      return;
+    } else {
+      items.push(numbers[i]);
+    }
+  }
+  renderItems();
 }
 
 // Generate random item from list

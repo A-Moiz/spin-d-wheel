@@ -102,6 +102,7 @@ button:hover {
 
 .page-layout {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -112,11 +113,12 @@ button:hover {
 }
 
 .right-panel {
-  width: 350px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 30px;
   background-color: #f2f2f2;
-  border-left: 1px solid #ddd;
-  font-family: "DM Mono", cursive;
+  border-top: 1px solid #ddd;
+  font-family: "DM Mono", monospace;
 }
 
 .right-header {
@@ -143,9 +145,10 @@ button:hover {
 
 .generate-btn {
   text-align: center;
-  width: 250px;
+  width: 90%;
+  max-width: 300px;
   align-self: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .delete-btn {
@@ -220,4 +223,49 @@ button:hover {
   border: none;
   padding: 10px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    flex-direction: row;
+  }
+
+  .right-panel {
+    width: 350px;
+    border-left: 1px solid #ddd;
+    border-top: none;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .appearance-btn {
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: 10px;
+  }
+
+  input {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-section .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 480px) {
+  .modal-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
